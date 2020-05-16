@@ -10,6 +10,10 @@
     <title>My test page</title>
   </head>
   <body>
-
+    <ul>
+    {% for stock in stock_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ stock.stock_name }}</a></li>
+    {% endfor %}
+    </ul>
   </body>
 </html>

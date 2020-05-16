@@ -2,7 +2,8 @@
 
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'investingSite/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 
 <html>
   <head>
@@ -10,10 +11,11 @@
     <title>My test page</title>
   </head>
   <body>
-    <ul>
+
+      <table class="table">
     {% for stock in stock_list %}
-        <li><a href="">{{ stock.stock_name }}</a></li>
+        <tr><th><a href="">{{ stock.stock_name }}</a></th></tr>
     {% endfor %}
-    </ul>
+      </table>
   </body>
 </html>

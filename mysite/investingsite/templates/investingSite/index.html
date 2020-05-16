@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stonks</title>
+  </head>
+  <body>
+      <table class="table dark">
+    {% for stock in stock_list %}
+        <tr><th><a href="google.com">{{ stock.stock_name }}</a></th></tr>
+    {% endfor %}
+      </table>
+  </body>
+</html>

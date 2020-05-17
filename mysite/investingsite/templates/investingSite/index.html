@@ -11,10 +11,22 @@
     <title>Stonks</title>
   </head>
   <body>
-      <table class="table dark">
+      <table class="table table-dark">
+        <thead>
+        <tr>
+      <th scope="col">Ticker</th>
+      <th scope="col">Name</th>
+      <th scope="col">Stuff</th>
+        </tr>
+        </thead>
+        <tbody>
     {% for stock in stock_list %}
-        <tr><th><a href="google.com">{{ stock.stock_name }}</a></th></tr>
+        <tr>
+          <th scope="row">{{ stock.stock_ticker }}</a></th>
+          <td><a href="{% url 'investingsite:detail' stock.stock_id %}">{{ stock.stock_name }}</a></td>
+        </tr>
     {% endfor %}
+        </tbody>
       </table>
   </body>
 </html>

@@ -19,7 +19,9 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Stock
-    template_name = 'investingSite/detail.html'
+    context_object_name = 'stock'
+    template_name = 'investingSite/stockDetails.html'
 
     def get_queryset(self):
-        return Stock.objects.all()
+        return Stock.objects.filter(stock_id="MOWIOSL")
+

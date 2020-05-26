@@ -14,8 +14,14 @@ class IndexView(generic.ListView):
     context_object_name = 'stock_list'
 
     def get_queryset(self):
-        """F
-        Return the last five published questions (not including those set to be
-        published in the future).
-        """
         return Stock.objects.all()
+
+
+class DetailView(generic.DetailView):
+    model = Stock
+    context_object_name = 'stock'
+    template_name = 'investingSite/stockDetails.html'
+
+    def get_queryset(self):
+        return Stock.objects.filter(stock_id="MOWIOSL")
+

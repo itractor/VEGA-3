@@ -23,5 +23,5 @@ class DetailView(generic.DetailView):
     template_name = 'investingSite/stockDetails.html'
 
     def get_queryset(self):
-        return Stock.objects.filter(stock_id="MOWIOSL")
+        return Stock.objects.filter(stock_id=self.kwargs['pk'])
 

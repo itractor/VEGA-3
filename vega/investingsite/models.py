@@ -1,13 +1,6 @@
-import datetime
 import random
-from operator import __floordiv__
 
 from django.db import models
-
-# Create your models here.
-from django.db.models import F
-from django.utils import timezone
-
 
 class Stock(models.Model):
     random.seed(a=None, version=2)

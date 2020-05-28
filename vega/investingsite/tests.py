@@ -25,9 +25,20 @@ class StockIndexViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_price_to_earnings(self):
-        """
-        If no questions exist, an appropriate message is displayed.
-        """
         stock = create_stock("MOWIXOSL2019", "MOWI", "MOWI", Decimal('70.9'), Decimal('12900.0'), 1000)
         print(stock.pricetoearnings())
-        self.assertEqual(stock.pricetoearnings(), 100000000)
+        self.assertEqual(round(stock.pricetoearnings(), 4), Decimal('5.4961'))
+
+    def test_earnings_per_share(self):
+        stock = create_stock("MOWIXOSL2019", "MOWI", "MOWI", Decimal('70.9'), Decimal('12900.0'), 1000)
+        print(stock.earnings_per_share())
+        self.assertEqual(round(stock.earnings_per_share(), 4), Decimal('12.9000'))
+
+    def test_price_to_earnings_rainy(self):
+        stock = create_stock("MOWIXOSL2019", "MOWI", "MOWI", Decimal('70.9'), Decimal('0'), 1000)
+        print(stock.pricetoearnings())
+        self.assertEqual(stock.pricetoearnings(), None)
+
+    def test_earnings_per_share_rainy(self):
+        stock = create_stock("MOWIXOSL2019", "MOWI", "MOWI", Decimal('70.9'), Decimal('12900.0'), 0)
+        self.assertEqual(stock.earnings_per_share(), None)

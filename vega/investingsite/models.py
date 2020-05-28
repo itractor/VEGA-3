@@ -22,8 +22,15 @@ class Stock(models.Model):
         return self.stock_name
 
     def pricetoearnings(self):
-
-        return self.stock_price / Stock.earnings_per_share(self)
+        try:
+            return self.stock_price / Stock.earnings_per_share(self)
+        except ZeroDivisionError as err:
+            print('Handling run-time error:', err)
+            pass
 
     def earnings_per_share(self):
-        return self.stock_earnings / self.stock_shares_outstanding
+        try:
+            return self.stock_earnings / self.stock_shares_outstanding
+        except ZeroDivisionError as err:
+            print('Handling run-time error:', err)
+            pass

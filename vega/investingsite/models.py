@@ -42,7 +42,7 @@ class Stock(models.Model):
 
     def book_value_per_share(self):
         try:
-            return Stock.book_value(self) / self.total_liabilities
+            return Stock.book_value(self) / self.shares_outstanding
         except ZeroDivisionError as err:
             print('Handling run-time error:', err)
             pass

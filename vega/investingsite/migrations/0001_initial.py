@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
             name='Stock',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('stock_name', models.CharField(max_length=100)),
-                ('stock_ticker', models.CharField(max_length=10)),
+                ('name', models.CharField(max_length=100)),
+                ('ticker', models.CharField(max_length=10)),
                 ('pub_date', models.DateTimeField(verbose_name='date published')),
             ],
         ),

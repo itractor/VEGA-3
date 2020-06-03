@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='stock',
-            name='stock_price',
+            name='price',
             field=models.DecimalField(decimal_places=3, default=0, max_digits=10),
         ),
     ]

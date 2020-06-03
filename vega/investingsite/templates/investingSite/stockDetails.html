@@ -11,9 +11,8 @@
     <title>Stokks</title>
   </head>
   <body>
-    <div class="card text-white bg-dark mb-3" style="width: 40rem;">
-        <div class="card-body">
-        <h5 class="card-title">Valuation</h5>
+    <div class="col-sm-6">
+        <div class="table-responsive">
             <table class="table table-bordered table-striped table-dark mb-0">
                 <thead>
                     <tr>
@@ -40,13 +39,13 @@
                     </tr>
                     <tr>
                       <th scope="row">P/B</a></th>
-                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
-                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
-                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
-                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
-                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
-                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
-                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_book }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_book }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_book }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_book }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_book }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_book }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_book }}</a></td>
                     </tr>
                     <tr>
                       <th scope="row">D/E</a></th>
@@ -79,7 +78,7 @@
                         <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
                     </tr>
                 </tbody>
-      </table>
+            </table>
         </div>
     </div>
   </body>

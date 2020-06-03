@@ -22,8 +22,8 @@
         <tbody>
     {% for stock in stock_list %}
         <tr>
-          <th scope="row">{{ stock.stock_ticker }}</a></th>
-          <td><a href="{% url 'investingsite:detail' stock.stock_id %}">{{ stock.stock_name }}</a></td>
+          <th scope="row">{{ stock.ticker }}</a></th>
+          <td><a href="{% url 'investingsite:detail' stock.stock_id %}">{{ stock.name }}</a></td>
         </tr>
     {% endfor %}
         </tbody>

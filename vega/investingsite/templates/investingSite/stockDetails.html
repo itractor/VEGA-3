@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stokks</title>
+  </head>
+  <body>
+    <div class="card text-white bg-dark mb-3" style="width: 40rem;">
+        <div class="card-body">
+        <h5 class="card-title">Valuation</h5>
+            <table class="table table-bordered table-striped table-dark mb-0">
+                <thead>
+                    <tr>
+                        <th scope="row">Blank?</th>
+                        <th scope="col">2015</th>
+                        <th scope="col">2016</th>
+                        <th scope="col">2017</th>
+                        <th scope="col">2018</th>
+                        <th scope="col">2019</th>
+                        <th scope="col">YTD</th>
+                        <th scope="col">5 Year sum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th scope="row">P/E</a></th>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">P/B</a></th>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">D/E</a></th>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">FCF</a></th>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">PEG</a></th>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                        <td><a href="#" class="card-link">{{ stock.price_to_earnings }}</a></td>
+                    </tr>
+                </tbody>
+      </table>
+        </div>
+    </div>
+  </body>
+</html>

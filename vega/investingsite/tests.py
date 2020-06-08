@@ -75,3 +75,19 @@ class StockMathFunctionsTests(TestCase):
                              Decimal('10000000.1'),
                              Decimal('300.1'), Decimal('100.2'))
         self.assertEqual(round(stock.book_value(), 4), Decimal('9999599.8000'))
+
+    def test_debt_to_equity(self):
+        stock = create_stock("MOWIXOSL2019", "MOWI", "MOWI", Decimal('70.9'), Decimal('12900.0'), 1000,
+                             Decimal('1000.1'), Decimal('300.1'), Decimal('100.2'))
+        self.assertEqual(round(stock.debt_to_equity(), 4), Decimal('0.4287'))
+
+    def test_debt_to_equity_rainy_divistion_by_zero(self):
+        stock = create_stock("MOWIXOSL2019", "MOWI", "MOWI", Decimal('1000'), Decimal('1000'), 100, Decimal('100'),
+                             Decimal('100'), Decimal('1000'))
+        self.assertEqual(stock.debt_to_equity(), None)
+
+    def test_shareholder_equity(self):
+        stock = create_stock("MOWIXOSL2019", "MOWI", "MOWI", Decimal('70.9'), Decimal('12900.0'), 1000,
+                             Decimal('10000000.1'),
+                             Decimal('300.1'), Decimal('100.2'))
+        self.assertEqual(round(stock.shareholder_equity(), 4), Decimal('9999700.0000'))
